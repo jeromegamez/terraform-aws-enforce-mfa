@@ -12,6 +12,6 @@ variable "users" {
 
 variable "allow_password_change_without_mfa" {
   description = "Allow changing the user password without MFA"
-  type        = string
-  default     = "false"
+  type        = bool
+  default     = false
 }
