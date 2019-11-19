@@ -48,7 +48,7 @@ data "aws_iam_policy_document" "force_mfa" {
     ]
 
     resources = [
-      "arn:aws:iam::*:user/$${aws:username}"
+      "arn:aws:iam::*:user/&{aws:username}"
     ]
 
   }
@@ -65,7 +65,7 @@ data "aws_iam_policy_document" "force_mfa" {
 
     resources = [
       "arn:aws:iam::*:mfa/*",
-      "arn:aws:iam::*:user/$${aws:username}"
+      "arn:aws:iam::*:user/&{aws:username}"
     ]
     
   }
@@ -84,8 +84,8 @@ data "aws_iam_policy_document" "force_mfa" {
     ]
 
     resources = [
-      "arn:aws:iam::*:mfa/$${aws:username}",
-      "arn:aws:iam::*:user/$${aws:username}"
+      "arn:aws:iam::*:mfa/&{aws:username}",
+      "arn:aws:iam::*:user/&{aws:username}"
     ]
     
   }
@@ -101,8 +101,8 @@ data "aws_iam_policy_document" "force_mfa" {
     ]
 
     resources = [
-      "arn:aws:iam::*:mfa/$${aws:username}",
-      "arn:aws:iam::*:user/$${aws:username}"
+      "arn:aws:iam::*:mfa/&{aws:username}",
+      "arn:aws:iam::*:user/&{aws:username}"
     ]
 
     condition {
@@ -206,7 +206,7 @@ data "aws_iam_policy_document" "force_mfa_but_allow_sign_in_to_change_password" 
     ]
 
     resources = [
-      "arn:aws:iam::*:user/$${aws:username}"
+      "arn:aws:iam::*:user/&{aws:username}"
     ]
 
   }
@@ -223,7 +223,7 @@ data "aws_iam_policy_document" "force_mfa_but_allow_sign_in_to_change_password" 
 
     resources = [
       "arn:aws:iam::*:mfa/*",
-      "arn:aws:iam::*:user/$${aws:username}"
+      "arn:aws:iam::*:user/&{aws:username}"
     ]
     
   }
@@ -242,8 +242,8 @@ data "aws_iam_policy_document" "force_mfa_but_allow_sign_in_to_change_password" 
     ]
 
     resources = [
-      "arn:aws:iam::*:mfa/$${aws:username}",
-      "arn:aws:iam::*:user/$${aws:username}"
+      "arn:aws:iam::*:mfa/&{aws:username}",
+      "arn:aws:iam::*:user/&{aws:username}"
     ]
     
   }
@@ -259,8 +259,8 @@ data "aws_iam_policy_document" "force_mfa_but_allow_sign_in_to_change_password" 
     ]
 
     resources = [
-      "arn:aws:iam::*:mfa/$${aws:username}",
-      "arn:aws:iam::*:user/$${aws:username}"
+      "arn:aws:iam::*:mfa/&{aws:username}",
+      "arn:aws:iam::*:user/&{aws:username}"
     ]
 
     condition {
