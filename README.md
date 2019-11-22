@@ -4,7 +4,7 @@ Terraform module to enforce MFA for AWS groups and users.
 
 This module implements the instructions provided in the AWS Documentation: [Enable Your Users to Configure Their Own Credentials and MFA Settings](https://docs.aws.amazon.com/IAM/latest/UserGuide/tutorial_users-self-manage-mfa-and-creds.html).
 
-This version of the module uses terraform v0.12.x. If you want to use a previous version of terraform please use the release 1.0.0 of this module.
+This version of the module uses terraform v0.12.x. If you want to use a previous version of terraform please use the [release 1.0.0](https://registry.terraform.io/modules/jeromegamez/enforce-mfa/aws/1.0.0) of this module.
 
 ## Usage
 
@@ -29,7 +29,7 @@ module "aws-enforce-mfa" {
 
 - `groups` Enforce MFA for the members in these groups (Default: _[]_)
 - `users` Enforce MFA for these users (Default: _[]_)
-- `allow_password_change_without_mfa` (Default: _"false"_)
+- `allow_password_change_without_mfa` (Default: _false_)
 
 ## License
 
